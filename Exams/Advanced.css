@@ -1,338 +1,77 @@
-@media(min-width: 1024px) {
-    .exams-details {
-        margin:0 0 0 8rem
-    }
+* {
+  box-sizing: border-box;
 }
 
-@media(min-width: 768px) {
-    .exams-details-header {
-        margin-left:1.5rem;
-        width: 80%
-    }
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
 }
 
-.exams-details-header__title {
-    font-size: 3.2rem;
-    font-weight: 500;
-    text-align: center
+.main {
+  max-width: 1000px;
+  margin: auto;
 }
 
-@media(min-width: 768px) {
-    .exams-details-header__title {
-        text-align:left
-    }
+h1 {
+  font-size: 50px;
+  word-break: break-all;
 }
 
-.exams-details-header__img__olympiads {
-    margin-top: 1.2rem
+.row {
+  margin: 10px -16px;
 }
 
-.exams-details-header__logo {
-    width: 11.3rem;
-    height: 11.3rem;
-    border-radius: 50%;
-    border: .2rem solid #808093;
-    padding: 1.5rem
+.row,
+.row > .column {
+  padding: 8px;
 }
 
-.exams-details-header__logo__without-border {
-    border-radius: none;
-    border: none;
-    padding: .5rem
+.column {
+  float: left;
+  width: 33.33%;
+  display: none;
+  overflow: hidden;
 }
 
-@media(min-width: 1024px) {
-    .exams-details {
-        transform:scale(1)
-    }
+.content {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
 }
 
-.exams-details_info-card {
-    position: relative;
-    margin: 2rem auto;
-    width: 90%;
-    border-radius: .8rem
+.column img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
 }
 
-.exams-details_info-card.bg-exams-olympiads {
-    background-image: linear-gradient(111deg,#111 5%,#181818 43%,#202020 91%)
+.column:hover img {
+  transform: scale(1.1);
 }
 
-.exams-details_info-card.bg-exams-olympiads:after {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-    content: "";
-    width: 9.6rem;
-    height: 10rem;
-    background: url(/assets/images/idea-bg.png);
-    background-size: cover
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.exams-details_info-card.bg-exams-jee-advance {
-    background-image: linear-gradient(126deg,#364082 6%,#285c8f 49%,#2d7a9e 102%)
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
 }
 
-.exams-details_info-card.bg-exams-jee-advance:after {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-    content: "";
-    width: 9.6rem;
-    height: 10rem;
-    background: url(/assets/images/iit-bg.png);
-    background-size: cover
+.btn:hover {
+  background-color: #ddd;
 }
 
-.exams-details_info-card.bg-exams-jee-main {
-    background-image: linear-gradient(117deg,#f1846e 6%,#f18870 34%,#f9c98a 90%)
-}
-
-.exams-details_info-card.bg-exams-jee-main:after {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-    content: "";
-    width: 9.6rem;
-    height: 10rem;
-    background: url(/assets/images/java-bg.png);
-    background-size: cover
-}
-
-.exams-details_info-card.bg-exams-kvpy {
-    background-image: linear-gradient(119deg,#26c731 6%,#1fa328 45%,#167d1d 88%)
-}
-
-.exams-details_info-card.bg-exams-kvpy:after {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-    content: "";
-    width: 9.6rem;
-    height: 10rem;
-    background: url(/assets/images/java-bg.png);
-    background-size: cover
-}
-
-.exams-details_info-card.bg-exams-bitsat {
-    background-image: linear-gradient(118deg,#bc7adb 6%,#a449a2 38%,#912b72 78%)
-}
-
-.exams-details_info-card.bg-exams-bitsat:after {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-    content: "";
-    width: 9.6rem;
-    height: 10rem;
-    background: url(/assets/images/bitsat-bg.png);
-    background-size: cover
-}
-
-.exams-details_info-card.bg-exams-ntse {
-    background-image: linear-gradient(119deg,#657be7 6%,#363d9c 43%,#181969 88%)
-}
-
-.exams-details_info-card.bg-exams-ntse:after {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-    content: "";
-    width: 9.6rem;
-    height: 10rem;
-    background: url(/assets/images/idea-bg.png);
-    background-size: cover
-}
-
-@media(min-width: 1024px) {
-    .exams-details_info-card {
-        max-width:75rem;
-        margin: 2rem 0 4rem 5rem
-    }
-}
-
-.exams-details_info-card__description {
-    color: #fff;
-    font-size: 1.4rem;
-    padding: 3rem;
-    font-weight: 500
-}
-
-.exams-details-about__title {
-    font-size: 2rem;
-    font-weight: 500;
-    padding: 1rem
-}
-
-@media(min-width: 1024px) {
-    .exams-details-about__title {
-        font-size:3.2rem
-    }
-}
-
-.exams-details-about__subtitle {
-    font-size: 1.6rem;
-    font-weight: 500;
-    padding: 1rem
-}
-
-@media(min-width: 1024px) {
-    .exams-details-about__subtitle {
-        font-size:2.4rem
-    }
-}
-
-.exams-details-about__description {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #808093
-}
-
-@media(min-width: 1024px) {
-    .exams-details-about__description {
-        font-size:1.8rem
-    }
-}
-
-.exams-details-about__description p {
-    padding: 1rem;
-    text-align: left
-}
-
-.exams-details-about__description p strong {
-    color: rgba(0,0,0,.7);
-    margin-right: 1rem
-}
-
-.exams-details-about__description a {
-    text-decoration: none;
-    margin-left: 1rem;
-    color: #808093
-}
-
-.exams-details-about__description li {
-    padding: 1rem;
-    text-align: left
-}
-
-.exams-details-about__description li strong {
-    color: rgba(0,0,0,.7);
-    margin-right: 1rem
-}
-
-.exams-details-about__table-data {
-    width: 99%;
-    padding: 1rem;
-    border: 1px solid #808093;
-    border-collapse: collapse;
-    overflow-x: auto
-}
-
-.exams-details-about__table-data th {
-    font-weight: 700;
-    border: 1px solid #808093;
-    border-collapse: collapse;
-    font-size: 1.4rem;
-    padding: 1.5rem
-}
-
-@media(min-width: 1024px) {
-    .exams-details-about__table-data th {
-        font-size:1.8rem
-    }
-}
-
-.exams-details-about__table-data tr {
-    border: 1px solid #808093;
-    border-collapse: collapse;
-    padding: .5rem
-}
-
-@media(min-width: 1024px) {
-    .exams-details-about__table-data tr {
-        padding:1.5rem
-    }
-}
-
-.exams-details-about__table-data td {
-    border: 1px solid #808093;
-    border-collapse: collapse;
-    padding: .5rem;
-    color: #808093;
-    font-size: 1.2rem
-}
-
-@media(min-width: 1024px) {
-    .exams-details-about__table-data td {
-        padding:1.5rem;
-        font-size: 1.4rem
-    }
-}
-
-.exams-details-about__table-data td:nth-child(n+1) {
-    text-align: "center"!important
-}
-
-.exams-details-about__table-data__half-width {
-    width: 100%
-}
-
-@media(min-width: 768px) {
-    .exams-details-about__table-data__half-width {
-        width:70%
-    }
-}
-
-@media(min-width: 1024px) {
-    .exams-details-about__table-data__half-width {
-        width:60%
-    }
-}
-
-.exams-details-info__title {
-    font-size: 2rem;
-    font-weight: 400;
-    padding: 1rem;
-    margin-left: 7%
-}
-
-@media(min-width: 1024px) {
-    .exams-details-info__title {
-        font-size:2.4rem
-    }
-}
-
-.exams-details-info__description {
-    margin-left: 10%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5rem
-}
-
-@media(min-width: 1024px) {
-    .exams-details-info__description {
-        top:10.2rem
-    }
-}
-
-.exams-details-info__description ul {
-    list-style: none
-}
-
-.exams-details-info__description ul li {
-    background-color: #ffeee6;
-    padding: 2rem;
-    font-size: 1.2rem;
-    border-bottom: .1rem solid #fff
-}
-
-@media(min-width: 1024px) {
-    .exams-details-info__description ul li {
-        font-size:2rem
-    }
-}
-
-.exams-details-info__description ul li a {
-    text-decoration: none;
-    color: rgba(0,0,0,.7)
+.btn.active {
+  background-color: #666;
+  color: white;
 }

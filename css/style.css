@@ -8042,6 +8042,9 @@ h1, h2, h3, h4, h5,
     width: calc(100% - 30px);
     color: rgba(255, 255, 255, 0.7); }
 
+    #ftco-navbar.navbar {
+      min-height: 50px; /* Adjust the value to your preferred height */
+    }
 .ftco-navbar-light {
   background: transparent !important;
   z-index: 3;
@@ -8077,8 +8080,8 @@ h1, h2, h3, h4, h5,
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
         padding-left: 0;
         padding-right: 0;
-        padding-top: .9rem;
-        padding-bottom: .9rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
         color: black; }
         .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
           color: #fff; } }
