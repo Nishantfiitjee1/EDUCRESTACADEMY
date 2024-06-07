@@ -8066,7 +8066,7 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 10px; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 15px;
+    font-size: 18px;
     padding-top: 1rem;
     padding-bottom: 1;
     padding-left: 20px;
@@ -8222,21 +8222,22 @@ h1, h2, h3, h4, h5,
     opacity: .3;
     background: #070d70; }
   .hero-wrap.hero-wrap-2 {
+    
     height: 300px; }
     .hero-wrap.hero-wrap-2 .slider-text {
       height: 300px; }
       .hero-wrap.hero-wrap-2 .slider-text .bread {
         font-weight: 900;
-        color: #fff; }
+        color: rgb(57, 49, 133); }
       .hero-wrap.hero-wrap-2 .slider-text .breadcrumbs {
         text-transform: uppercase;
         font-size: 13px;
         letter-spacing: 1px; }
         .hero-wrap.hero-wrap-2 .slider-text .breadcrumbs span {
-          color: #fff;
+          color: rgb(57, 49, 133);
           border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
           .hero-wrap.hero-wrap-2 .slider-text .breadcrumbs span a {
-            color: #fff; }
+            color: rgb(57, 49, 133); }
 
 .owl-carousel {
   position: relative; }

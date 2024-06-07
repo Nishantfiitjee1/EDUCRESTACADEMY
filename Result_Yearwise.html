@@ -63,21 +63,53 @@
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
 		<div class="container d-flex align-items-center">
 			<a class="navbar-brand" href="index.html">
-				<img src="images\THE_EDU_CREST_LOGO.png" class="Logo-img" alt="Coaching Center Logo">
+				<img src="images/THE_EDU_CREST_LOGO.png" class="Logo-img" alt="Coaching Center Logo">
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.html" class="nav-link pl-0 material-hover">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link material-hover">About</a></li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link material-hover" data-toggle="dropdown">
+							About us <i class="fa fa-caret-down" aria-hidden="true"></i>
+						</a>
+						<div class="dropdown-menu">
+							<a href="Founder_message.html" class="dropdown-item with-arrow">Founders Message</a>
+							<a href="vision.html" class="dropdown-item">Vision & Mission</a>
+							<a href="why_educrest.html" class="dropdown-item">Why Educrest Academy</a>
+							
+						</div>
+					</li>
 					<li class="nav-item"><a href="teacher.html" class="nav-link material-hover">Teacher</a></li>
-					<li class="nav-item"><a href="courses.html" class="nav-link material-hover">Courses</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link material-hover">Result</a></li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link material-hover" data-toggle="dropdown">
+							Courses <i class="fa fa-caret-down" aria-hidden="true"></i>
+						</a>
+						<div class="dropdown-menu">
+							<a href="IIT.html" class="dropdown-item with-arrow">
+								IIT-JEE
+							</a>
+							<a href="Neet.html" class="dropdown-item">NEET (UG)</a>
+							<a href="#" class="dropdown-item">CLASS X-XII</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link material-hover" data-toggle="dropdown">
+							Result <i class="fa fa-caret-down" aria-hidden="true"></i>
+						</a>
+						<div class="dropdown-menu">
+							<a href="Result_Yearwise.html" class="dropdown-item with-arrow">
+								Jee Advanced
+							</a>
+							<a href="#" class="dropdown-item">Jee Mains</a>
+							<a href="#" class="dropdown-item">Neet</a>
+							<a href="#" class="dropdown-item">CLASS X-XII</a>
+						</div>
+					</li>
+
 					<li class="nav-item"><a href="contact.html" class="nav-link material-hover">Contact</a></li>
-					
 				</ul>
 			</div>
 		</div>
@@ -86,13 +118,13 @@
 		<div class="line"></div>
 	</section>
     <!-- END nav -->
-	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/banner.png');">
 		<div class="overlay"></div>
 		<div class="container">
 		  <div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-			  <h1 class="mb-2 bread">Contact Us</h1>
-			  <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+			  <h1 class="mb-2 bread">Results</h1>
+			  <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Result <i class="ion-ios-arrow-forward"></i></a></span> <span>Jee Advanced <i class="ion-ios-arrow-forward"></i></span></p>
 			</div>
 		  </div>
 		</div>
@@ -102,9 +134,8 @@
 	<div class="section-padding gallery-section" id="gallery">
         <div class="container">
           <!-- Section Title Start -->
-          <div class="text-center">
-            <h2 class="title">Our Results</h2>
-			
+          <div class="text-center" id="titles">
+            <h2 class="title">Our <span>Results</span> </h2>
           </div>
           <!-- Section Title End -->
 
@@ -328,6 +359,30 @@
 			  }
 			});
 		  });
+	</script>
+	<script>
+		$(document).ready(function () {
+			// Toggle the navbar menu on clicking the "Menu" button
+			$('.navbar-toggler').click(function () {
+				$('.navbar-collapse').slideToggle(500);
+			});
+	
+			// Ensure dropdowns work on hover and click
+			function toggleDropdown(e) {
+				const _d = $(e.target).closest('.dropdown'),
+					_m = $('.dropdown-menu', _d);
+				setTimeout(function () {
+					const shouldOpen = e.type !== 'click' && _d.is(':hover');
+					_m.toggleClass('show', shouldOpen);
+					_d.toggleClass('show', shouldOpen);
+					$('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+				}, e.type === 'mouseleave' ? 300 : 0);
+			}
+	
+			$('body')
+				.on('mouseenter mouseleave', '.dropdown', toggleDropdown)
+				.on('click', '.dropdown-menu a', toggleDropdown);
+		});
 	</script>
   </body>
 </html>

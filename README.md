@@ -52,6 +52,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Note:** Replace placeholders like `your-username` with your actual GitHub username.
+**Note:** Replace placeholders like `nishantpoddar17` with your actual GitHub username.
 
 Feel free to enhance this README with more details specific to your website, such as information about the technologies used, deployment instructions, or any other relevant information.

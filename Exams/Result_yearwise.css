@@ -1,4 +1,19 @@
-
+#titles{
+  height: 100%;
+  width: 100%;
+  background-image: url(https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=1060&t=st=1701062942~exp=1701063542~hmac=bfc8c76f240fe8332176dee6534a9c99b90f5f039252cc6a3153310c96c7a5a1);
+  font-family: 'Lilita One', sans-serif;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  gap: 30px;
+}
+#titles>h2 span{
+  -webkit-text-stroke: 1px black;
+  text-stroke: 4px rgb(255, 255, 255);
+  color: aliceblue;
+}
   
   a {
     text-decoration: none;
@@ -19,8 +34,7 @@
   .title {
     font-size: 46px;
     font-weight: 700;
-    font-family: "Playfair Display", serif;
-    color: #f44336;
+    color: #393185;
   } 
   
   .filter {
@@ -55,14 +69,14 @@
     max-width: 1320px;
     flex-wrap: wrap;
     margin: 25px auto;
-    /* gap: 14px; */
+    gap: 14px;
   }
   .gallery a {
     display: flex;
   }
   .gallery img {
-    width: 200px;
-    height: 220px;
+    width: 270px;
+    height: 278px;
     object-fit: cover;
     transition: 0.3s ease-in-out;
     border-radius: 12px;

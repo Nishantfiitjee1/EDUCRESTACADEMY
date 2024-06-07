@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year-wise PYQs</title>
+    <!-- <link rel="stylesheet" href="style.css"> Link to your external CSS file -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 300px;
+        }
+        
+        .title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        
+        .year-group {
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .year-group:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        
+        .year {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+        
+        .actions {
+            margin-top: 20px;
+        }
+        
+        .button {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+        
+        .open {
+            /* Specific styles for open button */
+        }
+        
+        .download {
+            /* Specific styles for download button */
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">Year-wise Question Papers</h1>
+
+        <div class="pyq-container">
+            <!-- Year Group 1 -->
+            <div class="year-group">
+                <h2 class="year">2023</h2>
+                <div class="actions">
+                    <a href="https://jeeadv.ac.in/past_qps/2023_1_English.pdf" target="_blank" class="button open">Open</a>
+                    <a href="https://jeeadv.ac.in/past_qps/2023_1_English.pdf" target="_blank" download class="button download">Download</a>
+                </div>
+            </div>
+
+            <!-- Year Group 2 -->
+            <div class="year-group">
+                <h2 class="year">2022</h2>
+                <div class="actions">
+                    <a href="path/to/your/2022/question-paper.pdf" target="_blank" class="button open">Open</a>
+                    <a href="path/to/your/2022/question-paper.pdf" download class="button download">Download</a>
+                </div>
+            </div>
+
+            <!-- Add more year groups as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

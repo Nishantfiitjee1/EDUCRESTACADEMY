@@ -61,32 +61,67 @@
 		  </div>
 		</div>
 	  </div>
-	
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
 		<div class="container d-flex align-items-center">
 			<a class="navbar-brand" href="index.html">
-				<img src="images\THE_EDU_CREST_LOGO.png" class="Logo-img" alt="Coaching Center Logo">
+				<img src="images/THE_EDU_CREST_LOGO.png" class="Logo-img" alt="Coaching Center Logo">
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.html" class="nav-link pl-0 material-hover">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link material-hover">About</a></li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link material-hover" data-toggle="dropdown">
+							About us <i class="fa fa-caret-down" aria-hidden="true"></i>
+						</a>
+						<div class="dropdown-menu">
+							<a href="Founder_message.html" class="dropdown-item with-arrow">Founders Message</a>
+							<a href="vision.html" class="dropdown-item">Vision & Mission</a>
+							<a href="why_educrest.html" class="dropdown-item">Why Educrest Academy</a>
+							
+						</div>
+					</li>
 					<li class="nav-item"><a href="teacher.html" class="nav-link material-hover">Teacher</a></li>
-					<li class="nav-item"><a href="courses.html" class="nav-link material-hover">Courses</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link material-hover">Result</a></li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link material-hover" data-toggle="dropdown">
+							Courses <i class="fa fa-caret-down" aria-hidden="true"></i>
+						</a>
+						<div class="dropdown-menu">
+							<a href="IIT.html" class="dropdown-item with-arrow">
+								IIT-JEE
+							</a>
+							<a href="Neet.html" class="dropdown-item">NEET (UG)</a>
+							<a href="#" class="dropdown-item">CLASS X-XII</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link material-hover" data-toggle="dropdown">
+							Result <i class="fa fa-caret-down" aria-hidden="true"></i>
+						</a>
+						<div class="dropdown-menu">
+							<a href="Result_Yearwise.html" class="dropdown-item with-arrow">
+								Jee Advanced
+							</a>
+							<a href="#" class="dropdown-item">Jee Mains</a>
+							<a href="#" class="dropdown-item">Neet</a>
+							<a href="#" class="dropdown-item">CLASS X-XII</a>
+						</div>
+					</li>
+
 					<li class="nav-item"><a href="contact.html" class="nav-link material-hover">Contact</a></li>
-					
 				</ul>
 			</div>
 		</div>
 	</nav>
+	<section>
+
+		<div class="line"></div>
+	</section>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/banner.png');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -374,6 +409,29 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script>
+	$(document).ready(function () {
+		// Toggle the navbar menu on clicking the "Menu" button
+		$('.navbar-toggler').click(function () {
+			$('.navbar-collapse').slideToggle(500);
+		});
+
+		// Ensure dropdowns work on hover and click
+		function toggleDropdown(e) {
+			const _d = $(e.target).closest('.dropdown'),
+				_m = $('.dropdown-menu', _d);
+			setTimeout(function () {
+				const shouldOpen = e.type !== 'click' && _d.is(':hover');
+				_m.toggleClass('show', shouldOpen);
+				_d.toggleClass('show', shouldOpen);
+				$('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+			}, e.type === 'mouseleave' ? 300 : 0);
+		}
+
+		$('body')
+			.on('mouseenter mouseleave', '.dropdown', toggleDropdown)
+			.on('click', '.dropdown-menu a', toggleDropdown);
+	});
+</script>
   </body>
 </html>
